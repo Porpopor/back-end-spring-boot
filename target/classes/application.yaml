@@ -1,0 +1,27 @@
+server:
+  port: 8080
+Spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      jdbc:
+        time_zone: ICT
+        generate-ddl: true
+        show-sql: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 5MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/back_end
+    username: root
+    password:
+#    url: jdbc:postgresql://localhost:5432/dashboard
+#    username: postgres
+#    password: Porpopor
+
+app:
+  token:
+    secret: m#topSecret
+    issuer: BackendService
